@@ -1,0 +1,3 @@
+displayName = Mole Mod
+author = Ian, Cam, Julian
+version = 0.1
