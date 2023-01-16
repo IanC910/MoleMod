@@ -9,7 +9,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.NPCs.MoleEnemy
+namespace MoleMod.NPCs
 {
 
 	public class MoleEnemy : ModNPC
@@ -24,6 +24,18 @@ namespace ExampleMod.Content.NPCs.MoleEnemy
 			NPC.width = 64;
 			NPC.height = 64;
 			NPC.damage = 50;
+			NPC.defense = 10;
+			NPC.lifeMax = 100;
+			NPC.HitSound = SoundID.NPCHit1;
+			NPC.DeathSound = SoundID.NPCDeath1;
+			NPC.knockBackResist = 0;
+			NPC.aiStyle = 3;
+
+			AIType = NPCID.Skeleton;
+		}
+
+		public override void OnHitPlayer(Player target, int damage, bool crit) {
+			damage = 9999;
 		}
 	}
 }
